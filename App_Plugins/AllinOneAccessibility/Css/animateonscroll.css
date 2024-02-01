@@ -1,0 +1,27 @@
+﻿.animate-on-scroll .umb-box {
+    background: #f6f4f4;
+}
+
+.animate-on-scroll .toggle .umb-button {
+    margin-left: 0;
+}
+
+.animate-on-scroll .demo-box {
+    background: #1b264f;
+    padding: 10px;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.animate-on-scroll .animation-form {
+    overflow-x: auto;
+}
+
+.animate-on-scroll .animation-settings {
+    min-width: 370px;
+}
+
+.animate-on-scroll .animation-demo {
+    min-width: 100px;
+}
+

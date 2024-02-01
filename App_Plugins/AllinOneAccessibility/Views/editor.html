@@ -1,0 +1,160 @@
+﻿<div class="animate-on-scroll" ng-controller="AllinOneAccessibility.Controller as vm">
+    <div class="toggle">
+        <umb-button ng-show="!model.value" action="vm.add()" type="button" button-style="info" icon="icon-add" label="Enable widget"></umb-button>
+        <umb-button ng-show="model.value && !vm.edit" action="vm.edit = true" type="button" button-style="info" label="Edit '{{model.value.animation}}' animation {{model.value.disabled ? '(disabled)':''}}"></umb-button>
+        <umb-button ng-show="model.value && vm.edit" action="vm.edit = false" type="button" button-style="info" label="Close"></umb-button>
+    </div>
+    <form name="animation" class="form-horizontal" novalidate>
+        <div class="animation-form flex mt2" ng-show="vm.edit == true">
+            <div class="mr3 w-50 umb-box animation-settings">
+                <div class="umb-box-content">
+
+                    <div class="control-group">
+                        <div class="control-header">
+                            <label class="control-label" title="">Color</label>
+                        </div>
+                        <div class="controls ml0">
+                            <input type="text" ng-model="model.value.color" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-header">
+                            <label for="position" class="control-label">Position</label>
+                            <small class="control-description">Defines which position of the element regarding to window should trigger the animation</small>
+                        </div>
+                        <div class="controls ml0">
+                            <select ng-model="model.value.position" class="input-medium" id="position">
+                                <option ng-repeat="position in vm.positionArr" value="{{position}}">{{position}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="control-header">
+                            <label for="icontype" class="control-label">Icon Type</label>
+                            <small class="control-description">Defines which Icon Type of the element regarding to window should trigger the animation</small>
+                        </div>
+                        <div class="controls ml0">
+                            <div class="row" id="icontype">
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-type-1" ng-model="vm.icontype"
+                                              value="aioa-icon-type-1" class="form-radio" />
+                                        <label for="edit-type-1" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg"
+                                                 width="65" height="65" />
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-type-2"
+                                                ng-model="vm.icontype" value="aioa-icon-type-2"
+                                               class="form-radio" />
+                                        <label for="edit-type-2" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-2.svg"
+                                                 width="65" height="65" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-type-3" ng-model="vm.icontype"
+                                                value="aioa-icon-type-3"
+                                               class="form-radio" />
+                                        <label for="edit-type-3" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-3.svg" width="65" height="65" />
+
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="icon-size-wrapper control-group" id="select_icon_size">
+                        <div class="control-header"><label class="fcol-sm-12 col-form-label">Icon size: </label></div>
+                        <div class="controls ml0">
+                            <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-size-big" ng-model="vm.iconsize" value="aioa-big-icon"
+                                               class="form-radio" />
+                                        <label for="edit-size-big" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg"
+                                                 width="75" height="75" />
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-size-medium" checked="" ng-model="vm.iconsize"
+                                               value="aioa-medium-icon" class="form-radio" />
+                                        <label for="edit-size-medium" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg"
+                                                 width="65" height="65" />
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-size-default" ng-model="vm.iconsize" value="aioa-default-icon"
+                                               class="form-radio" />
+                                        <label for="edit-size-default" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg"
+                                                 width="55" height="55" />
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-size-small" ng-model="vm.iconsize" value="aioa-small-icon"
+                                               class="form-radio" />
+                                        <label for="edit-size-small" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg"
+                                                 width="45" height="45" />
+
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto mb-30">
+                                    <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
+                                        <input type="radio" id="edit-size-extra-small" ng-model="vm.iconsize"
+                                               value="aioa-extra-small-icon" class="form-radio" />
+                                        <label for="edit-size-extra-small" class="option">
+                                            <img src="https://skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg"
+                                                 width="35" height="35" />
+
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <umb-button class="w-100" ng-show="model.value"
+                                action="vm.save()" type="button" button-style="primary" icon="icon-save" label="Save Setting"></umb-button>
+
+                </div>
+
+            </div>
+
+            <div class="mr3 w-50 umb-box flex items-center justify-center animation-demo">
+                <script id="aioa-adawidget"
+                        src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#0b2972&token=ADAAIOA-FD8BCB9FDC14475BF7B0AB75BBE54FA1&position=bottom_left"></script>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+</div>

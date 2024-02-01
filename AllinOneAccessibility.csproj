@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ContentTargetFolders>.</ContentTargetFolders>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>AllinOneAccessibility</PackageId>
+    <Product>All in One Accessibility</Product>
+    <Title>AllinOneAccessibility</Title>
+    <Description>All in One Accessibility widget improves website ADA compliance and browser experience for ADA, WCAG 2.1 &amp; 2.2, Section 508, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, California Unruh, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards. All in One Accessibility Widget complies with GDPR, COPPA regulations.</Description>
+    <PackageTags>umbraco plugin package</PackageTags>
+    <Authors>Rajesh Bhimani</Authors>
+    <Company>Skynet Technologies USA LLC</Company>
+    <PackageProjectUrl>https://www.skynettechnologies.com/all-in-one-accessibility</PackageProjectUrl>
+    <PackageIcon>AIOA-logo.png</PackageIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>False</IncludeSymbols>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="13.0.3" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Plugins\AllinOneAccessibility\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Skynet\Desktop\AIOA-logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AllinOneAccessibilityContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\AllinOneAccessibility\**\*.*</AllinOneAccessibilityContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyAllinOneAccessibilityAssets" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <AllinOneAccessibilityContentFiles Include="$(AllinOneAccessibilityContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying AllinOneAccessibility files: $(AllinOneAccessibilityContentFilesPath) - #@(AllinOneAccessibilityContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(AllinOneAccessibilityContentFiles)" DestinationFiles="@(AllinOneAccessibilityContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\AllinOneAccessibility\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearAllinOneAccessibilityAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <AllinOneAccessibilityDir Include="$(MSBuildProjectDirectory)\App_Plugins\AllinOneAccessibility\" />
+    </ItemGroup>
+    <Message Text="Clear old AllinOneAccessibility data" Importance="high" />
+    <RemoveDir Directories="@(AllinOneAccessibilityDir)" />
+  </Target>
+</Project>

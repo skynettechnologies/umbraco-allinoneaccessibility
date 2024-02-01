@@ -1,0 +1,20 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "AllinOneAccessibility",
+      "name": "All in One Accessibility",
+      "icon": "icon-eye",
+      "hideLabel": true,
+      "editor": {
+        "view": "~/App_Plugins/AllinOneAccessibility/Views/editor.html",
+        "valueType": "JSON"
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/AllinOneAccessibility/Js/editor.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/AllinOneAccessibility/Css/animateonscroll.css"
+  ]
+}
