@@ -116,13 +116,13 @@ Admin > Configuration >Local Plugin > All in One Accessibility
 
 ## Screenshots
 
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot3.png)
+![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-3.jpg)
 
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot1.png)
+![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-1.jpg)
 
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot2.png)
+![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-2.jpg)
 
-![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot4.png)
+![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-4.jpg)
 
 ## Video
 
