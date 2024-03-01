@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ln4KedXNynzehXTNItXzGjc+pYPd7bDantX8KnOBD9C5O6WLtqcXSjl8zwkguI5GDZJvQXNaxWgpJKiNoZ47wQ==",
+  "dgSpecHash": "yBZ9Ge5tW0LI/+rKIwT/hxI9VYdqgf//MYrwi926Df8ta+3VnL3zdiD9qNhCIj930H64rrhOj/N7EtrJogPscQ==",
   "success": true,
-  "projectFilePath": "D:\\xampp74\\htdocs\\umbraco\\AllinOneAccessibility\\AllinOneAccessibility.csproj",
+  "projectFilePath": "D:\\xampp74\\htdocs\\umbraco\\umbraco-allinoneaccessibility\\AllinOneAccessibility.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Skynet\\.nuget\\packages\\asp.versioning.abstractions\\7.0.0\\asp.versioning.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Skynet\\.nuget\\packages\\asp.versioning.http\\7.1.0\\asp.versioning.http.7.1.0.nupkg.sha512",

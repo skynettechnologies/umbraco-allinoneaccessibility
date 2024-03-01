@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(@"All in One Accessibility widget improves website ADA compliance and browser experience for ADA, WCAG 2.1 & 2.2, Section 508, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, California Unruh, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards. All in One Accessibility Widget complies with GDPR, COPPA regulations.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d3a9495dfee6b0cd6d1e52e33911c0119f658a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("All in One Accessibility")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AllinOneAccessibility")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

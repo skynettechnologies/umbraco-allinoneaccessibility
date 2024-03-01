@@ -12,7 +12,7 @@
     <projectUrl>https://www.skynettechnologies.com/all-in-one-accessibility</projectUrl>
     <description>All in One Accessibility widget improves website ADA compliance and browser experience for ADA, WCAG 2.1 &amp; 2.2, Section 508, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, California Unruh, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards. All in One Accessibility Widget complies with GDPR, COPPA regulations.</description>
     <tags>umbraco plugin package</tags>
-    <repository type="git" />
+    <repository type="git" commit="3d3a9495dfee6b0cd6d1e52e33911c0119f658a1" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Umbraco.Cms.Web.BackOffice" version="13.0.3" exclude="Build,Analyzers" />
@@ -21,17 +21,17 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\bin\Release\net8.0\AllinOneAccessibility.dll" target="lib\net8.0\AllinOneAccessibility.dll" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\App_Plugins\AllinOneAccessibility\Css\animateonscroll.css" target=".\App_Plugins\AllinOneAccessibility\Css\animateonscroll.css" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\App_Plugins\AllinOneAccessibility\Js\editor.controller.js" target=".\App_Plugins\AllinOneAccessibility\Js\editor.controller.js" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\App_Plugins\AllinOneAccessibility\package.manifest" target=".\App_Plugins\AllinOneAccessibility\package.manifest" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.css" target=".\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.css" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.js" target=".\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.js" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\App_Plugins\AllinOneAccessibility\Views\editor.html" target=".\App_Plugins\AllinOneAccessibility\Views\editor.html" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\favicon.ico" target=".\favicon.ico" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\LICENSE" target="\LICENSE" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\readme.md" target="\readme.md" />
-    <file src="D:\xampp74\htdocs\umbraco\AllinOneAccessibility\buildTransitive\AllinOneAccessibility.targets" target="buildTransitive\AllinOneAccessibility.targets" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\bin\Release\net8.0\AllinOneAccessibility.dll" target="lib\net8.0\AllinOneAccessibility.dll" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\App_Plugins\AllinOneAccessibility\Css\animateonscroll.css" target=".\App_Plugins\AllinOneAccessibility\Css\animateonscroll.css" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\App_Plugins\AllinOneAccessibility\Js\editor.controller.js" target=".\App_Plugins\AllinOneAccessibility\Js\editor.controller.js" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\App_Plugins\AllinOneAccessibility\package.manifest" target=".\App_Plugins\AllinOneAccessibility\package.manifest" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.css" target=".\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.css" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.js" target=".\App_Plugins\AllinOneAccessibility\Vendor\aos\aos-2.3.4.js" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\App_Plugins\AllinOneAccessibility\Views\editor.html" target=".\App_Plugins\AllinOneAccessibility\Views\editor.html" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\favicon.ico" target=".\favicon.ico" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\LICENSE" target="\LICENSE" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\README.md" target="\README.md" />
+    <file src="D:\xampp74\htdocs\umbraco\umbraco-allinoneaccessibility\buildTransitive\AllinOneAccessibility.targets" target="buildTransitive\AllinOneAccessibility.targets" />
     <file src="C:\Users\Skynet\Desktop\AIOA-logo.png" target="\AIOA-logo.png" />
   </files>
 </package>

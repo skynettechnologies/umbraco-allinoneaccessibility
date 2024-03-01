@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\xampp74\\htdocs\\umbraco\\AllinOneAccessibility\\AllinOneAccessibility.csproj": {}
+    "D:\\xampp74\\htdocs\\umbraco\\umbraco-allinoneaccessibility\\AllinOneAccessibility.csproj": {}
   },
   "projects": {
-    "D:\\xampp74\\htdocs\\umbraco\\AllinOneAccessibility\\AllinOneAccessibility.csproj": {
+    "D:\\xampp74\\htdocs\\umbraco\\umbraco-allinoneaccessibility\\AllinOneAccessibility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\xampp74\\htdocs\\umbraco\\AllinOneAccessibility\\AllinOneAccessibility.csproj",
+        "projectUniqueName": "D:\\xampp74\\htdocs\\umbraco\\umbraco-allinoneaccessibility\\AllinOneAccessibility.csproj",
         "projectName": "AllinOneAccessibility",
-        "projectPath": "D:\\xampp74\\htdocs\\umbraco\\AllinOneAccessibility\\AllinOneAccessibility.csproj",
+        "projectPath": "D:\\xampp74\\htdocs\\umbraco\\umbraco-allinoneaccessibility\\AllinOneAccessibility.csproj",
         "packagesPath": "C:\\Users\\Skynet\\.nuget\\packages\\",
-        "outputPath": "D:\\xampp74\\htdocs\\umbraco\\AllinOneAccessibility\\obj\\",
+        "outputPath": "D:\\xampp74\\htdocs\\umbraco\\umbraco-allinoneaccessibility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Skynet\\AppData\\Roaming\\NuGet\\NuGet.Config",
