@@ -17,7 +17,6 @@ Following features can be added as an addon
 -    Custom Branding  
 -    Live Site translates  
 -    Customize Accessibility Menu/widget  
--    Accessibility Monitoring  
 -    PDF / Word Document Remediation 
 
 
