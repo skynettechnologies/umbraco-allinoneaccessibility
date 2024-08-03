@@ -23,30 +23,6 @@ Admin > Configuration >Local Plugin > All in One Accessibility
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-3.jpg)
-
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-1.jpg)
-
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-2.jpg)
-
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/main/Screenshot-4.jpg)
-
-
-## Acknowledgements
-
-- [Umbraco All in One Accessibility](https://www.skynettechnologies.com/umbraco-accessibility-widget)
-- [Umbraco All in One Accessibility Extension installation steps blog](https://www.skynettechnologies.com/blog/umbraco-ada-web-accessibility-widget-installation)
-
-## Documentation
-
-[All in One Accessibility - User Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)
-
-## Support
-For any kind of queries/support please Email us at [Skynet Technologies Support](mailto:hello@skynettechnologies.com)
-
-
-## Screenshots
-
 ![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-1.jpg?v=2)
 
 ![App Screenshot](https://www.skynettechnologies.com/sites/default/files/Screenshot-2.jpg?v=2)
