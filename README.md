@@ -15,7 +15,7 @@ We provide a 10-day free trial. Get started [here](https://ada.skynettechnologie
 
 ## Configurations
 
-After downloading the [extension](https://marketplace.umbraco.com/), You can configure All in One Accessibility via Admin:
+After downloading the [extension](https://marketplace.umbraco.com/package/allinoneaccessibility), You can configure All in One Accessibility via Admin:
 
 ```
 Admin > Configuration >Local Plugin > All in One Accessibility
