@@ -11423,6 +11423,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11454,8 +11459,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Umbraco.Cms.Web.BackOffice' 13.0.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-74p6-39f2-23v3",
+      "libraryId": "Umbraco.Cms.Web.BackOffice",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Umbraco.Cms.Web.BackOffice' 13.0.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-j74q-mv2c-rxmp",
+      "libraryId": "Umbraco.Cms.Web.BackOffice",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
