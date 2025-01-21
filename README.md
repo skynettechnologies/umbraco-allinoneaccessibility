@@ -75,7 +75,7 @@ To avoid CORS policy issues, ensure the following URLs are allowed in your websi
 1. Update your server's CORS configuration to include these URLs.
 2. Ensure wildcard subdomains (`*`) are supported where necessary.
 3. Verify the application functionality by testing requests to these domains.
-4. If issues persist, consult the Strapi documentation for CORS configuration guidance.
+4. If issues persist, consult the Umbraco documentation for CORS configuration guidance.
 
 ## Configuration
 
