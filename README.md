@@ -8,13 +8,14 @@
 
 This lightweight and flexible widget is designed to improve your website’s compliance with **international accessibility standards**, including:
 
-### 🌍 **International Standards**
+### **International Standards**
 
 - **WCAG 2.0, 2.1, & 2.2** (Web Content Accessibility Guidelines)  
 - **ATAG 2.0** (Authoring Tool Accessibility Guidelines)  
 - **PDF/UA – ISO 14289** (Accessible PDF Format)
 
-### 🇺🇸 **United States**
+### **United States**
+
 - **ADA (Americans with Disabilities Act)**  
 - **ADA Title III Website Accessibility**  
 - **Section 508 (U.S. Government Standard)**  
@@ -35,70 +36,91 @@ This lightweight and flexible widget is designed to improve your website’s com
 - **Kansas ADA Compliance**  
 - **Washington State ADA Compliance**
 
-### 🇨🇦 **Canada**
+### **Canada**
+
 - **AODA (Accessibility for Ontarians with Disabilities Act)**  
 - **ACA (Accessible Canada Act)**
 
-### 🇬🇧 **United Kingdom**
+### **United Kingdom**
+
 - **UK Equality Act (EA)**
 
-### 🇪🇺 **European Union**
+### **European Union**
+
 - **EAA / EN 301 549 Accessibility**  
 - **EN 301 549 v4.1.1**
 
-### 🇫🇷 **France**
+### **France**
+
 - **RGAA (Référentiel Général d’Amélioration de l’Accessibilité)**
 
-### 🇩🇪 **Germany**
+### **Germany**
+
 - **BITV (Barrierefreie-Informationstechnik-Verordnung)**
 
-### 🇮🇹 **Italy**
+### **Italy**
+
 - **Italian Stanca Act**
 
-### 🇪🇸 **Spain**
+### **Spain**
+
 - **UNE 139803:2012**
 
-### 🇦🇹 **Austria**
+### **Austria**
+
 - **WZG (Austrian Web Accessibility Act)**
 
-### 🇨🇭 **Switzerland**
+### **Switzerland**
+
 - **Swiss Disability Discrimination Act (DDA)**
 
-### 🇸🇪 **Sweden**
+### **Sweden**
+
 - **Swedish Discrimination Act (2008:567)**
 
-### 🇮🇱 **Israel**
+### **Israel**
+
 - **IS 5568 (Israeli Standard)**
 
-### 🇦🇺 **Australia**
+### **Australia**
+
 - **Australian DDA (Disability Discrimination Act)**
 
-### 🇮🇳 **India**
+### **India**
+
 - **RPD Act (Rights of Persons with Disabilities Act)**  
 - **GIGW 3.0 (Guidelines for Indian Government Websites)**
 
-### 🇧🇷 **Brazil**
+### **Brazil**
+
 - **LBI 13.146/2015 (Brazilian Inclusion Law)**
 
-### 🇲🇽 **Mexico**
+### **Mexico**
+
 - **ADA-Inspired Web Accessibility Compliance**
 
-### 🇯🇵 **Japan**
+### **Japan**
+
 - **JIS X 8341**
 
-### 🇰🇷 **South Korea**
+### **South Korea**
+
 - **KWCAG 2.1 (Korean Web Content Accessibility Guidelines)**
 
-### 🇸🇬 **Singapore**
+### **Singapore**
+
 - **DSS and SGDS (Design System and Digital Standards)**
 
-### 🇲🇾 **Malaysia**
+### **Malaysia**
+
 - **PWD Act 2008 (Persons with Disabilities Act)**
 
-### 🇹🇭 **Thailand**
+### **Thailand**
+
 - **PDA 2013 (Persons with Disabilities Empowerment Act)**
 
-### 🇦🇪 **United Arab Emirates**
+### **United Arab Emirates**
+
 - **UAE Disability Act (Federal Law No. 29 of 2006)**
 
 For more details on supported accessibility laws and standards, visit  
@@ -154,7 +176,6 @@ To avoid CORS policy issues, ensure the following URLs are allowed in your websi
 | `https://*.gstatic.com`            | Fonts APIs                                   | Custom Fonts                     |
 | `https://vlibras.gov.br`           | VLibras - Brazilian Sign Language Service    | Sign Language                    |
 
-
 ## Instructions
 
 1. Update your server's CORS configuration to include these URLs.
@@ -168,9 +189,9 @@ To configure the widget, access the Admin Panel and head to the **All in One Acc
 
 ## Documentation
 
-- [Purchase Umbraco All in One Accessibility](https://www.skynettechnologies.com/umbraco-accessibility-widget)
-- [How to install All in One Accessibility Extension on Umbraco](https://www.skynettechnologies.com/blog/umbraco-ada-web-accessibility-widget-installation)
-- [All in One Accessibility - Features Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)
+- **[Purchase Umbraco All in One Accessibility](https://www.skynettechnologies.com/umbraco-accessibility-widget)**
+- **[How to install All in One Accessibility Extension on Umbraco](https://www.skynettechnologies.com/blog/umbraco-ada-web-accessibility-widget-installation)**
+- **[All in One Accessibility - Features Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)**
 
 ## Submit a Support Request
 
@@ -186,30 +207,36 @@ Alternatively, you can send an email to our support team:
 ### **[Manual Accessibility Audit Report](https://www.skynettechnologies.com/all-in-one-accessibility/addons#manual-accessibility-audit-report)**
 
 Enhance inclusivity and user experience by evaluating your website’s accessibility by accessibility experts.
-WCAG 2.0 / WCAG 2.1 / WCAG 2.2 Level AA conformance testing
-Automated, semi-automated testing
-Manual testing
-Simple before-after UI/UX recommendations on how to fix the issues
-Comprehensive audit report
+WCAG 2.0 / WCAG 2.1 / WCAG 2.2 Level AA conformance testing.
+Automated, semi-automated testing.
+Manual testing.
+Simple before-after UI/UX recommendations on how to fix the issues.
+Comprehensive audit report.
 
 ### **[Manual Accessibility Remediation](https://www.skynettechnologies.com/all-in-one-accessibility/addons#manual-accessibility-remediation)**
+
 Enhance website accessibility and inclusivity with our Manual Accessibility Remediation add-on. This service includes fixing accessibility issues and thorough remediation of your website manually. Our experts ensure accessibility with WCAG standards, improve user experience for those with disabilities, and provide a detailed report on the improvements made.
 
 ### **[PDF/Document Accessibility Remediation](https://www.skynettechnologies.com/all-in-one-accessibility/addons#pdf-document-remediation)**
+
 The PDF / Document Remediation provides a list of inaccessible PDFs and remediated PDFs from where you can request PDF remediation service.
  
- ### **[VPAT Report/Accessibility Conformance Report(ACR)](https://www.skynettechnologies.com/all-in-one-accessibility/addons#vpat-acr-report)**
- The Voluntary Product Accessibility Template (VPAT), also known as an ACR (Accessibility Conformance Report) starts with an audit and provides current details for an accessible website, application, or any other digital assets.
+### **[VPAT Report/Accessibility Conformance Report(ACR)](https://www.skynettechnologies.com/all-in-one-accessibility/addons#vpat-acr-report)**
+
+The Voluntary Product Accessibility Template (VPAT), also known as an ACR (Accessibility Conformance Report) starts with an audit and provides current details for an accessible website, application, or any other digital assets.
 
 ## Accessibility Widget Paid Add-ons
 
 ### **[White Label](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
+
 Remove the Skynet technologies logo as well as all of the footer links, popups, report a problem link and more for full white label control.
 
 ### **[Live Site Translations](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
+
 Translate your site into over 140 languages instantly to enhance accessibility for non-native speakers, individuals with language acquisition difficulties, and those with learning disabilities.
 
-###  **[Modify Accessibility Menu](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
+### **[Modify Accessibility Menu](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
+
 Build and fine-tune your widget with the Modify Menu option. Reorder, remove and restructure the widget buttons to fit your users’ specific accessibility needs.
 
 ## Accessibility Partnership Opportunities
@@ -226,17 +253,17 @@ For more details, Please visit **[Partnership Opportunities Page](https://www.sk
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/refs/heads/main/Screenshot-1.jpg)
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-1-free.jpg?v=4)
 
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/refs/heads/main/Screenshot-2.jpg)
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-2-free.jpg?v=4)
 
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/refs/heads/main/Screenshot-3.jpg)
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-3-free.jpg?v=4)
 
-![App Screenshot](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/refs/heads/main/Screenshot-4.jpg)
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-4-free.jpg?v=4)
 
 ## Video
 
-[![All in One Accessibility](https://img.youtube.com/vi/X70XtvGyvSs/0.jpg)](https://www.youtube.com/watch?v=X70XtvGyvSs)
+[![All in One Accessibility](https://img.youtube.com/vi/X70XtvGyvSs/0.jpg)](https://youtu.be/X70XtvGyvSs)
 
 ## Credits
 
