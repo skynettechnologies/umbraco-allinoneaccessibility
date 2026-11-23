@@ -1,0 +1,77 @@
+/**
+ * All in One Accessibility settings
+ * banners.css
+ *
+ * Plan notices above the settings (only one is visible):
+ *   #free_plan_upgrade_block  free plan - purple "Upgrade to Paid Plan" banner + NOTE
+ *   #paid_plan_block          paid plan - "Dashboard"
+ * and the "Widget installed on <domain>" line.
+ */
+
+/* ---------- Notice ---------- */
+
+.aioa-notice {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; padding: 20px 22px;
+  border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.aioa-notice-body { flex: 1; min-width: 240px; }
+.aioa-notice h2 { margin: 7px 0 3px; font-size: 18px; font-weight: 700; }
+.aioa-notice-body p:last-child { color: var(--muted); }
+.aioa-notice-action { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+
+/* Small status label: "Paid plan active" */
+.aioa-tag {
+  display: inline-block; padding: 2px 9px; border-radius: 5px;
+  font-size: 12.5px; font-weight: 600; background: var(--accent-soft); color: var(--accent);
+}
+.aioa-tag.is-success { background: var(--success-soft); color: var(--success); }
+
+/* ---------- Upgrade banner (free plan) ---------- */
+
+/* Solid brand purple (no gradient or glows) with a faded figure in the corner */
+.aioa-upgrade {
+  position: relative; overflow: hidden; isolation: isolate; padding: 23px 26px 18px; border-radius: var(--radius); color: #fff;
+  background: #420083;
+}
+.aioa-upgrade-watermark { position: absolute; right: -35px; top: -27px; z-index: -1; width: 205px; height: 205px; opacity: .08; pointer-events: none; }
+
+.aioa-upgrade-head { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 18px 24px; }
+.aioa-upgrade-intro { flex: 1; min-width: 240px; }
+.aioa-upgrade-intro > p:not(.aioa-upgrade-tag) { color: #e6dbff; }
+.aioa-upgrade-intro strong { color: #fff; }
+.aioa-upgrade h2 { margin: 10px 0 3px; font-size: 23px; font-weight: 700; }
+
+/* "Free plan active" label with a green dot */
+.aioa-upgrade-tag {
+  display: inline-flex; align-items: center; gap: 7px; padding: 2px 9px; border-radius: 5px;
+  font-size: 12.5px; font-weight: 600; background: rgba(255, 255, 255, .14); color: #f0e8ff;
+}
+.aioa-upgrade-tag i { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; }
+
+/* 190+ languages / 12 profiles */
+.aioa-upgrade-points { display: flex; flex-wrap: wrap; gap: 5px 20px; margin: 12px 0 0; padding: 0; list-style: none; font-weight: 600; }
+.aioa-upgrade-points li { display: flex; align-items: center; gap: 7px; }
+.aioa-upgrade-points li::before {
+  content: ""; width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, .2) var(--check-white) center / 11px no-repeat;
+}
+
+.aioa-upgrade-cta { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.aioa-upgrade-cta small { font-size: 12.5px; color: #dccbff; }
+.aioa-btn-white {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 0 20px;
+  border-radius: var(--radius-sm); background: #fff; color: #420083; font-weight: 700; text-decoration: none; white-space: nowrap;
+}
+.aioa-btn-white:hover { background: #f3eefa; }
+.aioa-btn-white svg { width: 17px; height: 17px; }
+
+.aioa-upgrade-note { margin-top: 16px; padding-top: 13px; border-top: 1px solid rgba(255, 255, 255, .16); font-size: 13.5px; color: #d3c1f3; }
+.aioa-upgrade-note b { color: #fff; }
+
+/* ---------- Site line ---------- */
+
+/* Dot and text on one row; a long domain wraps inside the text */
+.aioa-site { display: flex; align-items: flex-start; gap: 9px; margin: 14px 2px 0; color: var(--muted); }
+.aioa-site strong { color: var(--text); font-weight: 600; word-break: break-all; }
+.aioa-site-dot { width: 9px; height: 9px; flex-shrink: 0; margin-top: 7px; border-radius: 50%; background: var(--success); }
+#site-text { min-width: 0; }

@@ -1,0 +1,70 @@
+/**
+ * All in One Accessibility settings
+ * responsive.css
+ *
+ * Tablet (<= 720px) and phone (<= 600px) overrides, and reduced motion.
+ */
+
+@media (max-width: 720px) {
+  .aioa-columns, .aioa-pair { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .aioa-page { padding: 16px 16px 36px; }
+  .aioa-logo { width: 42px; height: 42px; }
+  .aioa-brand h1 { font-size: 18px; }
+  .aioa-card { padding: 18px; }
+  .aioa-notice { padding: 18px; }
+
+  /* Full width buttons in the notices */
+  .aioa-notice-action { width: 100%; }
+  .aioa-notice-action .aioa-btn { width: 100%; }
+  .aioa-upgrade { padding: 18px 18px 16px; }
+  .aioa-upgrade h2 { font-size: 21px; }
+  .aioa-upgrade-cta, .aioa-btn-white { width: 100%; }
+
+  /* Position options: glyph above the label */
+  .aioa-pos-label { flex-direction: column; justify-content: center; gap: 5px; padding: 9px 4px; font-size: 13px; text-align: center; }
+
+  /* Live preview chip: icon only */
+  .aioa-live { padding: 4px; }
+  .aioa-live-text { display: none; }
+
+  .aioa-offset-row { grid-template-columns: 1fr 1fr; }
+  .aioa-offset-row .aioa-label { grid-column: 1 / -1; }
+
+  .aioa-icon-grid { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: 10px; }
+  .aioa-icon-grid .aioa-icon { width: 48px; }
+  /* Icon sizes: keep all five on one row (the "Extra small" caption is wider than its circle) */
+  .aioa-size-row { --scale: .7; gap: 12px 10px; }
+  .aioa-size-row .aioa-icon-caption { font-size: 12.5px; }
+
+  /* Tabs: labels may wrap to two lines, lock in the corner */
+  .aioa-tabs { gap: 4px; padding: 4px; }
+  .aioa-tab { position: relative; min-height: 54px; padding: 8px 6px; font-size: 13px; line-height: 1.25; }
+  .aioa-tab-lock { position: absolute; top: 4px; right: 4px; width: 18px; height: 18px; }
+
+  /* Paid Features */
+  .aioa-feature-title { font-size: 16px; }
+  .aioa-toggle-card { padding: 16px 18px; }
+
+  /* Lock card */
+  .aioa-lock { padding: 40px 10px 10px; }
+  .aioa-lock-card { padding: 22px 18px; }
+  .aioa-lock-text { font-size: 17px; }
+
+  /* Score: ring above the three figures */
+  .aioa-score-body { flex-direction: column; gap: 20px; }
+  .aioa-score-stats { width: 100%; }
+  .aioa-stat { padding: 0 10px; }
+  .aioa-stat-value { font-size: 20px; }
+  .aioa-stat-label, .aioa-stat-count { font-size: 12.5px; }
+}
+
+@media (max-width: 420px) {
+  .aioa-size-row { justify-content: space-between; column-gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

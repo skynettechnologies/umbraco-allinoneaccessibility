@@ -1,0 +1,54 @@
+/**
+ * All in One Accessibility settings
+ * base.css
+ *
+ * Reset, typography (system font), page layout and the header.
+ */
+
+/* ---------- Reset ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p { margin: 0; }
+a { color: var(--link); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Hidden on screen, still read by screen readers */
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Page ---------- */
+
+.aioa-page { max-width: 900px; margin: 0 auto; padding: 24px 20px 44px; }
+
+/* ---------- Header ---------- */
+
+.aioa-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--border);
+}
+.aioa-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.aioa-logo { width: 48px; height: 48px; flex-shrink: 0; }
+.aioa-logo-circle { fill: var(--brand); } /* official logo purple in both themes */
+.aioa-brand h1 { font-size: 22px; font-weight: 800; letter-spacing: -.01em; line-height: 1.2; }
+.aioa-brand h1 sup { font-size: .55em; font-weight: 700; }
+.aioa-brand p { font-size: 13.5px; color: var(--muted); }
+
+/* Theme toggle: moon in light mode, sun in dark mode */
+.aioa-theme-toggle .i-sun { display: none; }
+.aioa-theme-toggle[data-mode="dark"] .i-sun { display: block; }
+.aioa-theme-toggle[data-mode="dark"] .i-moon { display: none; }

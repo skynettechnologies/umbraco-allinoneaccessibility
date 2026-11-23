@@ -1,20 +1,15 @@
 {
-  "propertyEditors": [
-    {
-      "alias": "AllinOneAccessibility",
-      "name": "All in One Accessibility",
-      "icon": "icon-eye",
-      "hideLabel": true,
-      "editor": {
-        "view": "~/App_Plugins/AllinOneAccessibility/Views/editor.html",
-        "valueType": "JSON"
-      }
-    }
-  ],
-  "javascript": [
-    "~/App_Plugins/AllinOneAccessibility/Js/editor.controller.js"
-  ],
-  "css": [
-    "~/App_Plugins/AllinOneAccessibility/Css/animateonscroll.css"
-  ]
+    "id": "AllinOneAccessibility",
+    "name": "All in One Accessibility",
+    "version": "2.1.1",
+    "allowPackageTelemetry": false,
+    "dashboards": [
+        {
+            "alias": "allinOneAccessibilityDashboard",
+            "view": "/App_Plugins/AllinOneAccessibility/dashboard.html",
+            "sections": ["settings"],
+            "weight": 42,
+            "label": "All in One Accessibility"
+        }
+    ]
 }

@@ -1,0 +1,53 @@
+/**
+ * All in One Accessibility settings
+ * paid.css
+ *
+ * Paid Features tab: widget position for mobile (the desktop position grid
+ * with phone glyphs), link fields with an icon title and switches.
+ */
+
+/* ---------- Link fields ---------- */
+
+/* Card title with a purple icon tile; the title is also the field label */
+.aioa-feature-title { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 17px; font-weight: 700; }
+.aioa-feature-title label { cursor: pointer; }
+.aioa-feature-icon { display: grid; place-items: center; width: 32px; height: 32px; flex-shrink: 0; border-radius: var(--radius-sm); background: var(--btn-primary); color: #fff; }
+.aioa-feature-icon svg { width: 18px; height: 18px; }
+
+/* Link icon inside the field */
+.aioa-affix-icon { display: grid; place-items: center; padding-left: 13px; color: var(--muted); }
+.aioa-affix-icon svg { width: 18px; height: 18px; }
+.aioa-link-input input { padding-left: 10px; }
+
+/* ---------- Switches ---------- */
+
+.aioa-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.aioa-toggle-card { display: flex; align-items: center; gap: 14px; padding: 18px 22px; font-weight: 600; cursor: pointer; }
+.aioa-toggle-card:hover { border-color: var(--border-strong); }
+
+/* Native checkbox drawn as a switch (role="switch" in the markup) */
+input[type="checkbox"].aioa-switch {
+  -webkit-appearance: none; appearance: none; position: relative; width: 42px; height: 24px; margin: 0; flex-shrink: 0;
+  border-radius: 999px; background: var(--border-strong); cursor: pointer; transition: background-color .15s ease;
+}
+.aioa-switch::before {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, .3); transition: transform .15s ease;
+}
+input[type="checkbox"].aioa-switch:checked { background: var(--btn-primary); }
+.aioa-switch:checked::before { transform: translateX(18px); }
+
+@media (forced-colors: active) {
+  input[type="checkbox"].aioa-switch { border: 1px solid CanvasText; }
+  .aioa-switch::before { background: CanvasText; }
+  input[type="checkbox"].aioa-switch:checked { background: Highlight; }
+}
+
+/* ---------- Widget position for mobile ---------- */
+
+.aioa-switch-head { display: flex; align-items: center; gap: 14px; }
+.aioa-switch-head h2 label { cursor: pointer; }
+#mobile-position-body { margin-top: 18px; }
+
+/* Same grid as the desktop position (settings.css); the glyphs are phone shaped */
+.aioa-glyph.is-phone { width: 16px; height: 24px; border-radius: 4px; }

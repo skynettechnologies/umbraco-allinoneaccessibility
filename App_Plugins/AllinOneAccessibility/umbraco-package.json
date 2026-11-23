@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/umbraco/Umbraco-CMS/main/src/Umbraco.Web.UI.Client/public-assets/umbraco-package-schema.json",
+  "id": "AllinOneAccessibility",
+  "name": "All in One Accessibility",
+  "version": "2.1.1",
+  "allowTelemetry": false,
+  "extensions": [
+    {
+      "type": "dashboard",
+      "alias": "AllinOneAccessibility.Dashboard",
+      "name": "All in One Accessibility Dashboard",
+      "element": "/App_Plugins/AllinOneAccessibility/v14/dashboard.element.js",
+      "elementName": "aioa-dashboard",
+      "weight": 42,
+      "meta": {
+        "label": "All in One Accessibility",
+        "pathname": "all-in-one-accessibility"
+      },
+      "conditions": [
+        {
+          "alias": "Umb.Condition.SectionAlias",
+          "match": "Umb.Section.Settings"
+        }
+      ]
+    }
+  ]
+}

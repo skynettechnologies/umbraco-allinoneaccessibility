@@ -1,0 +1,154 @@
+/**
+ * All in One Accessibility settings
+ * settings.css
+ *
+ * Settings sections: color, widget size, widget position, icon type,
+ * icon size and the save bar.
+ */
+
+/* ---------- Layout ---------- */
+
+.aioa-form { display: grid; gap: 18px; margin-top: 18px; }
+.aioa-columns { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; }
+
+/* Radio that is hidden but still focusable; its label shows the choice (icon options) */
+.aioa-radio { position: absolute; width: 1px; height: 1px; margin: 0; opacity: 0; pointer-events: none; }
+
+/* Bordered option with a visible native radio (widget size) */
+.aioa-choice {
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px; cursor: pointer;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface);
+}
+.aioa-choice:hover { border-color: var(--border-strong); }
+.aioa-choice:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+
+/* ---------- Widget color ---------- */
+
+/* Title on the left, "Live preview" chip on the right */
+.aioa-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.aioa-live {
+  display: flex; align-items: center; gap: 9px; flex-shrink: 0; padding: 5px 14px 5px 5px;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2);
+}
+.aioa-live-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--widget-color); }
+.aioa-live-icon img { width: 28px; height: 28px; object-fit: contain; }
+.aioa-live-text { font-size: 11.5px; font-weight: 600; line-height: 1.2; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+
+.aioa-color-row { display: flex; align-items: center; gap: 10px; }
+.aioa-swatch {
+  width: var(--control-h); height: var(--control-h); flex-shrink: 0; padding: 3px; cursor: pointer;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface);
+}
+.aioa-swatch::-webkit-color-swatch-wrapper { padding: 0; }
+.aioa-swatch::-webkit-color-swatch { border: 0; border-radius: 4px; }
+.aioa-swatch::-moz-color-swatch { border: 0; border-radius: 4px; }
+.aioa-hex { flex: 1; min-width: 0; max-width: 220px; }
+.aioa-hex input { text-transform: uppercase; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+/* Preset colors; the selected one gets a ring */
+.aioa-presets { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.aioa-preset {
+  width: 28px; height: 28px; padding: 0; border: 0; border-radius: 50%; cursor: pointer;
+  background: var(--c); box-shadow: inset 0 0 0 1px rgba(128, 128, 128, .35);
+}
+.aioa-preset[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--c); }
+
+/* ---------- Widget size ---------- */
+
+.aioa-size-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.aioa-size-choice { flex-direction: column; align-items: stretch; gap: 12px; padding: 14px; }
+.aioa-choice-text { display: flex; align-items: center; gap: 9px; font-weight: 600; }
+
+/* Outline of the open widget panel: same height, the oversize panel is wider (3 columns) */
+.aioa-panel {
+  align-self: center; display: flex; flex-direction: column; gap: 5px; height: 90px; padding-bottom: 5px;
+  overflow: hidden; border: 1px solid var(--border-strong); border-radius: 5px; background: var(--surface);
+}
+.aioa-panel.is-regular { width: 58px; }
+.aioa-panel.is-over { width: 84px; }
+.aioa-panel-head { flex-shrink: 0; height: 12px; background: var(--widget-color); }
+.aioa-panel-grid { display: grid; gap: 3px; padding: 0 5px; }
+.is-regular .aioa-panel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.is-over .aioa-panel-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.aioa-panel-grid i { aspect-ratio: 1.2; border-radius: 2px; border: 1px solid var(--border); background: var(--surface-2); }
+
+/* ---------- Widget position ---------- */
+
+.aioa-pos-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.aioa-pos-option { position: relative; min-width: 0; }
+.aioa-pos-label {
+  display: flex; align-items: center; gap: 12px; height: 100%; min-height: 60px; padding: 9px 14px; cursor: pointer;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); font-weight: 600;
+}
+.aioa-pos-label:hover { border-color: var(--border-strong); }
+.aioa-radio:checked + .aioa-pos-label { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.aioa-radio:focus-visible + .aioa-pos-label { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Small screen with a dot where the icon goes (--gx / --gy: 0, .5 or 1) */
+.aioa-glyph { position: relative; flex-shrink: 0; width: 28px; height: 20px; border: 1.5px solid currentColor; border-radius: 5px; opacity: .5; }
+.aioa-glyph i {
+  position: absolute; width: 7px; height: 7px; border-radius: 50%; background: currentColor;
+  left: calc(2px + var(--gx) * (100% - 11px)); top: calc(2px + var(--gy) * (100% - 11px));
+}
+.aioa-radio:checked + .aioa-pos-label .aioa-glyph { opacity: 1; }
+
+/* Center cell: mini website. "Your website" sits in its browser bar, so the
+   icon below can move to any of the 8 positions without covering the text. */
+.aioa-pos-center {
+  position: relative; overflow: hidden; min-height: 60px; color: var(--muted);
+  border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface-2);
+}
+.aioa-mini-label {
+  position: absolute; top: 0; left: 0; right: 0; height: 15px; overflow: hidden; white-space: nowrap;
+  background: var(--border); font-size: 10.5px; line-height: 15px; text-align: center;
+}
+/* 24px button, 6px from the sides, between the browser bar (15px) and the bottom edge (4px gaps) */
+.aioa-mini-widget {
+  position: absolute; z-index: 1; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--widget-color); box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  left: calc(6px + var(--gx) * (100% - 36px)); top: calc(19px + var(--gy) * (100% - 47px));
+  transition: left .3s ease, top .3s ease;
+}
+.aioa-mini-widget img { display: block; width: 16px; height: 16px; object-fit: contain; }
+
+/* Exact offsets / exact size */
+.aioa-subpanel { display: grid; gap: 12px; padding: 16px; border-radius: var(--radius-sm); background: var(--surface-2); border: 1px solid var(--border); }
+.aioa-subpanel .aioa-hint { margin-top: 0; }
+.aioa-offset-row { display: grid; grid-template-columns: 105px 140px minmax(0, 175px); align-items: center; gap: 10px; }
+.aioa-size-input { max-width: 170px; }
+
+/* ---------- Icon type and icon size ---------- */
+
+/* Each icon is shown as the real widget button: a circle in the widget color */
+.aioa-icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 12px; }
+.aioa-icon-option { position: relative; }
+.aioa-icon-label { display: grid; justify-items: center; gap: 7px; cursor: pointer; }
+.aioa-icon { position: relative; display: grid; place-items: center; width: 60px; aspect-ratio: 1; border-radius: 50%; background: var(--widget-color); }
+.aioa-icon img { width: 62%; height: 62%; object-fit: contain; pointer-events: none; }
+.aioa-radio:checked + .aioa-icon-label .aioa-icon { box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--accent); }
+/* Check badge on the selected icon so it is easy to spot */
+.aioa-radio:checked + .aioa-icon-label .aioa-icon::after {
+  content: ""; position: absolute; top: -6px; right: -6px; width: 21px; height: 21px; border-radius: 50%;
+  background: var(--btn-primary) var(--check-white) center / 12px no-repeat; box-shadow: 0 0 0 2px var(--surface);
+}
+.aioa-radio:focus-visible + .aioa-icon-label .aioa-icon { outline: 2px solid var(--focus); outline-offset: 7px; }
+.aioa-icon-caption { font-size: 13.5px; color: var(--muted); }
+.aioa-radio:checked + .aioa-icon-label .aioa-icon-caption { color: var(--text); font-weight: 600; }
+
+/* Icon size: each circle at its own diameter (--d, set in the icon-size partial), bottoms aligned */
+.aioa-size-row { --scale: 1; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px 22px; }
+.aioa-size-row .aioa-icon { width: calc(var(--d) * var(--scale)); }
+
+/* ---------- Save bar ---------- */
+
+.aioa-savebar {
+  position: sticky; bottom: 14px; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 12px 14px 12px 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+}
+.aioa-save-state { display: flex; align-items: center; gap: 9px; font-weight: 500; color: var(--muted); }
+.aioa-save-state i { width: 9px; height: 9px; flex-shrink: 0; border-radius: 50%; background: var(--success); }
+.aioa-savebar.is-dirty .aioa-save-state { color: var(--text); }
+.aioa-savebar.is-dirty .aioa-save-state i { background: #d97706; }
+
+.aioa-after-note { font-size: 13.5px; color: var(--muted); text-align: center; }

@@ -1,56 +1,94 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <!--
+    All in One Accessibility(R) for Umbraco - version 2.0.0
+    =======================================================
+    Full rebuild of the AllinOneAccessibility package on the 2026 reference
+    implementation ("All in One Accessibility New Code", settings page +
+    skynet-widget API service), ported from JavaScript to .NET.
+
+    Ships:
+      * AioaService      - C# port of app/skynet-widget.js (all Skynet API calls)
+      * Settings page    - backoffice-authorized page serving the reference UI
+                           (HTML/CSS/JS assets used verbatim, EJS output baked
+                           into page.html with placeholders)
+      * Widget injection - middleware adds the All in One Accessibility widget
+                           <script> to front-end pages automatically
+      * Dashboards       - Umbraco 10-13 (package.manifest) and 14+
+                           (umbraco-package.json) linking to the settings page
+
+    Cross-version strategy (proven by Skynet.Umbraco.AccessibilityScanner):
+    wide Umbraco version ranges; the host's pinned version wins. Only stable
+    Umbraco APIs are used (IComposer, IUmbracoBuilder, Constants, pipeline
+    filters).
+  -->
+
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <!-- net8.0 covers Umbraco 13 & 14; net9.0 covers Umbraco 15 & 16;
+         net10.0 covers Umbraco 17 (LTS) & 18. -->
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ContentTargetFolders>.</ContentTargetFolders>
-  </PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <IsPackable>true</IsPackable>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591;NU1902;NU1903</NoWarn>
 
-  <PropertyGroup>
+    <!-- Existing NuGet identity, major version bump. -->
     <PackageId>AllinOneAccessibility</PackageId>
-    <Product>All in One Accessibility</Product>
-    <Title>AllinOneAccessibility</Title>
-    <Description>All in One Accessibility widget improves website ADA compliance and browser experience for ADA, WCAG 2.1 &amp; 2.2, Section 508, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, California Unruh, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards. All in One Accessibility Widget complies with GDPR, COPPA regulations.</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <Version>2.1.1</Version>
+    <AssemblyName>AllinOneAccessibility</AssemblyName>
+    <RootNamespace>AllinOneAccessibility</RootNamespace>
+    <!-- Listing fields kept identical to the published 1.0.8 so the nuget.org page stays consistent. -->
+    <Title>All in One Accessibility</Title>
     <Authors>Rajesh Bhimani</Authors>
     <Company>Skynet Technologies USA LLC</Company>
+    <Description>Website Accessibility solution for ADA, WCAG 2.0, 2.1 &amp; 2.2, Section 508, California Unruh Act, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards.</Description>
+    <PackageTags>umbraco;plugin;package;umbraco-marketplace;accessibility;wcag;ada;section508;widget</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://www.skynettechnologies.com/all-in-one-accessibility</PackageProjectUrl>
-    <PackageIcon>AIOA-logo.png</PackageIcon>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
-    <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <IncludeSymbols>False</IncludeSymbols>
+    <RepositoryUrl>https://github.com/skynettechnologies/umbraco-allinoneaccessibility</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="13.0.3" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="13.0.3" />
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="[13.5.2, 17.0.0)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="[15.0.0, 17.0.0)" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="App_Plugins\AllinOneAccessibility\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
-    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  <!-- Umbraco 17 LTS and 18 (both net10.0). AioaUmbracoNet10Version exists so CI
+       can compile-check against a specific major:
+       dotnet build -f net10.0 -p:AioaUmbracoNet10Version=18.0.0 -->
+  <PropertyGroup>
+    <AioaUmbracoNet10Version Condition="'$(AioaUmbracoNet10Version)' == ''">[17.0.0, 19.0.0)</AioaUmbracoNet10Version>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="$(AioaUmbracoNet10Version)" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="favicon.ico" />
-  </ItemGroup>
+  <!--
+    App_Plugins ships inside the package and is copied into the consuming
+    website by buildTransitive/AllinOneAccessibility.targets (the mechanism
+    the 1.x package lacked - its dashboard never reached the site).
+  -->
+  <PropertyGroup>
+    <!-- The Razor SDK would claim App_Plugins .json files as its own default
+         Content items (and their Pack metadata can't be updated reliably from
+         the project body); exclude them so the single glob below owns everything. -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);App_Plugins/**/*.json</DefaultItemExcludes>
+  </PropertyGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\Skynet\Desktop\AIOA-logo.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <Content Include="App_Plugins\**\*" Pack="true" PackagePath="App_Plugins" CopyToOutputDirectory="Never">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <None Include="buildTransitive\AllinOneAccessibility.targets" Pack="true" PackagePath="buildTransitive" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="readme.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
 </Project>

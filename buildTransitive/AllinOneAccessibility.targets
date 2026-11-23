@@ -1,21 +1,30 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--
+    Copies this package's App_Plugins folder into the consuming Umbraco
+    website on every build, so the backoffice dashboards, the settings page
+    template and its assets are discovered and served from the site's
+    physical App_Plugins folder (Umbraco reads package.manifest /
+    umbraco-package.json from the content root only).
+
+    The file name must match the NuGet package id exactly
+    (buildTransitive/AllinOneAccessibility.targets), or NuGet will not
+    import it.
+  -->
+
   <PropertyGroup>
-    <AllinOneAccessibilityContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\AllinOneAccessibility\**\*.*</AllinOneAccessibilityContentFilesPath>
+    <AioaAppPluginsSource>$(MSBuildThisFileDirectory)..\App_Plugins\</AioaAppPluginsSource>
   </PropertyGroup>
 
-  <Target Name="CopyAllinOneAccessibilityAssets" BeforeTargets="BeforeBuild">
+  <Target Name="CopyAllinOneAccessibilityAppPlugins" BeforeTargets="BeforeBuild">
     <ItemGroup>
-      <AllinOneAccessibilityContentFiles Include="$(AllinOneAccessibilityContentFilesPath)" />
+      <AioaAppPluginsFiles Include="$(AioaAppPluginsSource)**\*.*" />
     </ItemGroup>
-    <Message Text="Copying AllinOneAccessibility files: $(AllinOneAccessibilityContentFilesPath) - #@(AllinOneAccessibilityContentFiles->Count()) files" Importance="high" />
-    <Copy SourceFiles="@(AllinOneAccessibilityContentFiles)" DestinationFiles="@(AllinOneAccessibilityContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\AllinOneAccessibility\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy
+      SourceFiles="@(AioaAppPluginsFiles)"
+      DestinationFiles="@(AioaAppPluginsFiles->'$(MSBuildProjectDirectory)\App_Plugins\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true"
+      Condition="'@(AioaAppPluginsFiles)' != ''" />
   </Target>
 
-  <Target Name="ClearAllinOneAccessibilityAssets" BeforeTargets="Clean">
-    <ItemGroup>
-      <AllinOneAccessibilityDir Include="$(MSBuildProjectDirectory)\App_Plugins\AllinOneAccessibility\" />
-    </ItemGroup>
-    <Message Text="Clear old AllinOneAccessibility data" Importance="high" />
-    <RemoveDir Directories="@(AllinOneAccessibilityDir)" />
-  </Target>
 </Project>

@@ -1,0 +1,42 @@
+/**
+ * All in One Accessibility settings
+ * score.css
+ *
+ * Accessibility Score card: status, score ring and three figures.
+ * The level (data-level on .aioa-score) sets the ring and status color:
+ *   compliant - green, semi - amber, not - red
+ */
+
+.aioa-score { --level: var(--success); }
+.aioa-score[data-level="semi"] { --level: var(--warning); }
+.aioa-score[data-level="not"] { --level: var(--danger); }
+
+.aioa-score-head h2 { font-size: 18px; }
+.aioa-score-status { margin-top: 2px; font-weight: 700; color: var(--level); }
+
+.aioa-score-body { display: flex; align-items: center; gap: 28px; margin-top: 18px; }
+
+/* Score ring: the bar covers --p of 100 (pathLength), starting at the top */
+.aioa-donut { position: relative; width: 124px; height: 124px; flex-shrink: 0; }
+.aioa-donut svg { display: block; width: 100%; height: 100%; transform: rotate(-90deg); }
+.aioa-donut circle { fill: none; stroke-width: 13; }
+.aioa-donut-track { stroke: var(--border); }
+.aioa-donut-bar { stroke: var(--level); stroke-dasharray: var(--p) 100; transition: stroke-dasharray .6s ease; }
+.aioa-donut-value { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 1px; }
+.aioa-donut-value b { font-size: 30px; font-weight: 800; line-height: 1; }
+.aioa-donut-value small { margin-top: 8px; font-size: 14px; font-weight: 700; }
+
+/* Three figures with thin dividers */
+.aioa-score-stats { flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.aioa-stat { min-width: 0; padding: 2px 18px; border-left: 1px solid var(--border); }
+.aioa-stat:first-child { padding-left: 0; border-left: 0; }
+.aioa-stat-value { font-size: 26px; font-weight: 800; line-height: 1.15; }
+.aioa-stat-label { margin-top: 3px; font-size: 13.5px; font-weight: 600; line-height: 1.3; }
+.aioa-stat-count { margin-top: 6px; font-size: 13.5px; color: var(--muted); }
+
+/* Last scan + PDF report */
+.aioa-score-foot {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid var(--border); font-size: 13.5px; color: var(--muted);
+}
+.aioa-score-foot a { font-weight: 600; }

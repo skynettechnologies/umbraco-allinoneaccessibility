@@ -1,0 +1,95 @@
+/**
+ * All in One Accessibility settings
+ * components.css
+ *
+ * Reusable pieces: buttons, cards, form fields, loading / error states
+ * and toast notifications.
+ */
+
+/* ---------- Buttons ---------- */
+
+.aioa-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: var(--control-h); padding: 0 18px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--text);
+  font-weight: 600; text-decoration: none; white-space: nowrap; cursor: pointer;
+}
+.aioa-btn:hover { background: var(--surface-2); }
+.aioa-btn-primary { border-color: var(--btn-primary); background: var(--btn-primary); color: #fff; }
+.aioa-btn-primary:hover { border-color: var(--btn-primary-hover); background: var(--btn-primary-hover); }
+.aioa-btn[disabled] { opacity: .7; cursor: progress; }
+
+/* Square button with only an icon (theme toggle) */
+.aioa-btn-icon { width: var(--control-h); padding: 0; }
+.aioa-btn-icon svg { width: 20px; height: 20px; }
+
+/* Spinner shown in busy buttons and while loading */
+.aioa-spinner {
+  width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%;
+  border: 2px solid currentColor; border-right-color: transparent; animation: aioa-spin .7s linear infinite;
+}
+@keyframes aioa-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Cards ---------- */
+
+.aioa-card {
+  min-width: 0; padding: 22px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.aioa-card h2 { font-size: 17px; font-weight: 700; }
+.aioa-desc { margin: 2px 0 18px; font-size: 14px; color: var(--muted); }
+
+/* ---------- Form fields ---------- */
+
+.aioa-fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.aioa-label { font-weight: 600; }
+.aioa-hint { margin-top: 7px; font-size: 13.5px; color: var(--muted); }
+.aioa-error { margin-top: 7px; font-size: 13.5px; color: var(--danger); }
+
+.aioa-select {
+  width: 100%; height: var(--control-h); padding: 0 12px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--text);
+}
+.aioa-select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+/* Input with a fixed text before or after it ("#", "https://", "px") */
+.aioa-affix {
+  display: flex; height: var(--control-h); overflow: hidden; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong); background: var(--surface);
+}
+.aioa-affix:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.aioa-affix.is-invalid { border-color: var(--danger); }
+.aioa-affix input { flex: 1; min-width: 0; padding: 0 12px; border: 0; background: transparent; outline: none; }
+.aioa-affix-text { display: grid; place-items: center; padding: 0 12px; background: var(--surface-2); color: var(--muted); }
+.aioa-affix-text:first-child { border-right: 1px solid var(--border); }
+.aioa-affix-text:last-child { border-left: 1px solid var(--border); }
+
+/* Native checkboxes and radios in the brand color */
+input[type="checkbox"], input[type="radio"] { width: 18px; height: 18px; margin: 0; flex-shrink: 0; accent-color: var(--accent); }
+.aioa-check { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; cursor: pointer; }
+
+/* ---------- Loading / error ---------- */
+
+.aioa-loading { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 88px 0; color: var(--muted); }
+.aioa-error-card { display: grid; justify-items: center; gap: 9px; padding: 44px 22px; text-align: center; }
+.aioa-error-card p { color: var(--muted); }
+
+/* ---------- Toasts ---------- */
+
+.aioa-toasts { position: fixed; top: 16px; left: 16px; right: 16px; z-index: 100; display: grid; justify-items: end; gap: 9px; pointer-events: none; }
+.aioa-toast {
+  pointer-events: auto; display: flex; align-items: flex-start; gap: 11px; width: 100%; max-width: 370px; padding: 14px;
+  border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+}
+.aioa-toast.is-leaving { opacity: 0; transition: opacity .2s ease; }
+.aioa-toast-ic { width: 24px; height: 24px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%; color: #fff; }
+.aioa-toast-ic svg { width: 14px; height: 14px; }
+.aioa-toast.is-success .aioa-toast-ic { background: #16a34a; }
+.aioa-toast.is-error .aioa-toast-ic { background: #dc2626; }
+.aioa-toast-body { flex: 1; min-width: 0; }
+.aioa-toast-body strong { display: block; font-weight: 600; }
+.aioa-toast-body p { font-size: 13.5px; color: var(--muted); }
+.aioa-toast-body a { display: inline-block; margin-top: 4px; font-size: 13.5px; font-weight: 600; }
+.aioa-toast-close { width: 26px; height: 26px; flex-shrink: 0; display: grid; place-items: center; padding: 0; border: 0; border-radius: 5px; background: none; color: var(--muted); cursor: pointer; }
+.aioa-toast-close:hover { background: var(--surface-2); color: var(--text); }
+.aioa-toast-close svg { width: 15px; height: 15px; }
