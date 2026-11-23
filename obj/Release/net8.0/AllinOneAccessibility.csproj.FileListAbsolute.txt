@@ -328,3 +328,4 @@ D:\xampp74\htdocs\umbraco\scanner\aioa\obj\Release\net8.0\AllinOneAccessibility.
 D:\xampp74\htdocs\umbraco\scanner\aioa\obj\Release\net8.0\refint\AllinOneAccessibility.dll
 D:\xampp74\htdocs\umbraco\scanner\aioa\obj\Release\net8.0\AllinOneAccessibility.pdb
 D:\xampp74\htdocs\umbraco\scanner\aioa\obj\Release\net8.0\ref\AllinOneAccessibility.dll
+D:\xampp74\htdocs\umbraco\scanner\aioa\obj\Release\net8.0\AllinOneAccessibility.sourcelink.json

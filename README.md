@@ -112,7 +112,7 @@ Configure the widget from the Umbraco admin panel.
 
 See how the widget performs with improved accessibility features:
 
-[![Free accessibility widget demo video](https://img.youtube.com/vi/VMHx30aUnR4/0.jpg)](https://www.youtube.com/watch?v=VMHx30aUnR4)
+[![Free accessibility widget demo video](https://raw.githubusercontent.com/skynettechnologies/umbraco-allinoneaccessibility/refs/heads/main/video-screen.jpg)](https://www.youtube.com/watch?v=VMHx30aUnR4)
 
 ## CORS Policy Configuration
 

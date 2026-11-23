@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(@"Website Accessibility solution for ADA, WCAG 2.0, 2.1 & 2.2, Section 508, California Unruh Act, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568, Ontario AODA, Canada ACA, German BITV, France RGAA, Brazilian Inclusion Law (LBI 13.146/2015), Spain UNE 139803:2012, JIS X 8341 (Japan), Italian Stanca Act and Switzerland DDA Standards.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.1+15e4869848a85a687ee467e57a0eb1578aca1ba6")]
 [assembly: System.Reflection.AssemblyProductAttribute("AllinOneAccessibility")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AllinOneAccessibility")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.1.1.0")]
