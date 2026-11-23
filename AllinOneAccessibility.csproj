@@ -37,7 +37,7 @@
 
     <!-- Existing NuGet identity, major version bump. -->
     <PackageId>AllinOneAccessibility</PackageId>
-    <Version>2.1.1</Version>
+    <Version>2.1.2</Version>
     <AssemblyName>AllinOneAccessibility</AssemblyName>
     <RootNamespace>AllinOneAccessibility</RootNamespace>
     <!-- Listing fields kept identical to the published 1.0.8 so the nuget.org page stays consistent. -->

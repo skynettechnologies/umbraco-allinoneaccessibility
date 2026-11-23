@@ -1,7 +1,7 @@
 {
     "id": "AllinOneAccessibility",
     "name": "All in One Accessibility",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "allowPackageTelemetry": false,
     "dashboards": [
         {

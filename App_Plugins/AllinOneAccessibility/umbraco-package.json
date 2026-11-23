@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/umbraco/Umbraco-CMS/main/src/Umbraco.Web.UI.Client/public-assets/umbraco-package-schema.json",
   "id": "AllinOneAccessibility",
   "name": "All in One Accessibility",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "allowTelemetry": false,
   "extensions": [
     {

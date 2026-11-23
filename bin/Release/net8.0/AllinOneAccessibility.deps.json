@@ -34,7 +34,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "AllinOneAccessibility/2.1.1": {
+      "AllinOneAccessibility/2.1.2": {
         "dependencies": {
           "Umbraco.Cms.Web.Common": "13.5.2",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
@@ -3733,7 +3733,7 @@
     }
   },
   "libraries": {
-    "AllinOneAccessibility/2.1.1": {
+    "AllinOneAccessibility/2.1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
